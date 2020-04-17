@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="A collaborative text editor">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <title>Collaborative Editor</title>
+        <link href="index.css" rel="stylesheet">
+    </head>
+    <body>
+        <section id="sidebar">
+            <div>
+                <h1>Chat</h1>
+                <div>
+                    <input type="text" id="name" placeholder="name">
+                    <input type="color" value="#ffffff" id="chatColor">
+                </div>
+            </div>
+            <section id="chat">
+
+            </section>
+            <div>
+                <input type="text" id="msg" placeholder="message">
+                <button type="button" id="send">Send</button>
+            </div>
+        </section>
+        <div id="editor"></div>
+        <script src="src-min/ace.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
