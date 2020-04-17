@@ -8,6 +8,7 @@ let crdt;
 
 socket.on('setup', (id) => {
     crdt = new CRDT(id);
+    name.value = name.value+'-'+id;
 });
 
 let name = document.getElementById('name');
