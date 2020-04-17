@@ -4,8 +4,8 @@ This is a very simple implementation of a collaborative text editor that runs in
 
 (Hint: open the example in multiple tabs to test the collab and chat features.)
 
-- [Live Example]()
-- [More Info]()
+- [Live Example](https://secure-coast-58748.herokuapp.com/)
+- [More Info](https://jc1812.github.io/collabEditor.html)
 
 # Set Up
 
