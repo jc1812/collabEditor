@@ -13,6 +13,9 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
     console.log("A user connected");
+    socket.on('chat', (msg) => {
+        socket.broadcast.emit('chat', msg);
+    });
 });
 
 http.listen(port, console.log(`App running on port ${port}`));

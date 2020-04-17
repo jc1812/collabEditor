@@ -20,6 +20,12 @@ send.addEventListener('click', (e) => {
     chat.scrollTop = chat.scrollHeight;
 
     msg.value = "";
+
+    socket.emit('chat', { messageText: messageText, userName: userName, userColor: color.value });
+});
+
+socket.on('chat', (msg) => {
+    printMessage(msg.messageText, msg.userColor, msg.userName);
 });
 
 function printMessage(messageText, userColor, userName) {
