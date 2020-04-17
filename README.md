@@ -17,8 +17,6 @@ Install dependencies
 npm install
 ```
 
-This app requires an [ace build](https://github.com/ajaxorg/ace-builds/). Download the src-min folder from that link and put it in the public folder of this repo.
-
 ### Launch the server.
 
 By default the server starts on [http://localhost:3000](http://localhost:3000)
