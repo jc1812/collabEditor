@@ -61,7 +61,6 @@ class CRDT {
     localInsert(value, index) {
         const char = this.generateChar(value, index);
         this.struct.splice(index, 0, char);
-        console.log(this.struct);
         return char;
     }
 
@@ -84,7 +83,6 @@ class CRDT {
 
     localDelete(index) {
         let char = this.struct.splice(index, 1)[0];
-        console.log(this.struct);
         return char;
     }
 
@@ -179,7 +177,6 @@ editor.session.on('change', (e) => {
 socket.on('remoteInsert', (msg) => {
     let char = crdt.remoteInsert(msg.char);
     let pos = getPos(char);
-    console.log(pos);
     editor.session.insert(pos, char.char);
 });
 
