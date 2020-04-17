@@ -11,10 +11,19 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname+'/index.html');
 });
 
+let userCount = 0;
+
 io.on('connection', (socket) => {
     console.log("A user connected");
+    socket.emit('setup', userCount++);
     socket.on('chat', (msg) => {
         socket.broadcast.emit('chat', msg);
+    });
+    socket.on('remoteInsert', (msg) => {
+        socket.broadcast.emit('remoteInsert', msg);
+    });
+    socket.on('remoteDelete', (msg) => {
+        socket.broadcast.emit('remoteDelete', msg);
     });
 });
 
